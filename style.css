@@ -1,8 +1,45 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
 
-canvas {
-  display: block;
-}
+body{font-family:'Montserrat',Arial,sans-serif;background:#caf0f8;color:#03045e} /*font e colore sfodno*/
+
+.page-header{padding:40px 4% 0} /*distanzab bordi tit*/
+
+h1{font-size:clamp(32px,4.2vw,62px);font-weight:700;margin:0} /*Tit*/
+
+.subtitle{font-size:clamp(17px,2vw,25px);font-weight:300;} /*Sottotitolo*/
+
+.header-rule{height:1px;background:rgba(3,4,94,.22);width:100%} /*riga*/
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:28px;padding:24px 4% 55px} /*box temperatura e specifiche*/
+
+.temperature-panel h2{font-size:30px;font-weight:600;letter-spacing:.07em;margin:0 0 13px} /*titolo temperatura*/
+
+.temperature-panel p{font-size:12px;line-height:1.6;margin:0 0 18px} /*corpo box a lato*/
+
+.gradiente{height:17px;width:100%;border-radius:3px;background:linear-gradient(90deg,#1644b8,#416dd7,#8d68bd,#d64c74,#db3030)} /*gradiente temp*/
+
+.tacche{display:flex;justify-content:space-between;margin-top:10px;font-size:12px;font-weight:600} /*tacchette temp min e max*/
+
+.units-note{margin-top:25px;padding-top:15px;border-top:1px solid rgba(3,4,94,.16)}
+.header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+
+.header-credit .author{font-weight:700}
+
+@media(max-width:960px){.layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:22px}}
+@media(max-width:700px){.header-top{flex-direction:column;gap:4px}.header-credit{text-align:left;padding:0 0 14px}.subtitle{margin-bottom:12px}}
+
+/* dettaglio*/
+
+.detail-page{padding:18px 4% 70px;max-width:1500px;margin:0 auto} /*distanza bordo top*/
+
+.back-link{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#03045e;font-size:12px;font-weight:600;letter-spacing:.025em;padding:7px 0;margin-bottom:12px} /*torna ai 100 fiumi*/
+
+.river-heading h2{font-size:clamp(10px,5.1vw,60px);line-height:1.0;font-weight:600;letter-spacing:-.04em;margin:0 0 0px;overflow-wrap:anywhere; margin-bottom:14px}
+
+.river-countries strong{font-weight:800}
+
+.river-fields{border-top:1px solid rgba(3,4,94,.3);max-width:1200px} /*riga*/
+
+.river-field{display:grid;grid-template-columns:minmax(180px,34%) 1fr;gap:20px;align-items:baseline;padding:21px 0;border-bottom:1px solid rgba(13, 14, 48, 0.18)} /*griglia*/
+
+.river-field dd{margin:0;font-size:clamp(18px,2.1vw,20px);font-weight:500;line-height:1.4;overflow-wrap:anywhere}
+
